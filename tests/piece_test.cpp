@@ -1,0 +1,29 @@
+/*
+	Copyright (C) 2026 Brigham Skarda
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#include <sstream>
+#include <gtest/gtest.h>
+
+#include "piece.h"
+
+using namespace chess_again;
+
+TEST(PieceTest, to_string)
+{
+	ASSERT_EQ(std::format("{}", pieces::WHITE_PAWN), "P");
+	ASSERT_EQ(std::format("{}", pieces::BLACK_PAWN), "p");
+}
